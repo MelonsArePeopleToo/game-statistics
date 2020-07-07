@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1508D5A1-3C89-4069-935A-CB67E1DD303C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SHWithDB</RootNamespace>
+    <AssemblyName>SHWithDB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.20\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation.cs" />
+    <Compile Include="Animator.cs" />
+    <Compile Include="DBMySQLUtils.cs" />
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="FlatColors.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FutureStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FutureStat.Designer.cs">
+      <DependentUpon>FutureStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LastStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LastStat.Designer.cs">
+      <DependentUpon>LastStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewRequest.Designer.cs">
+      <DependentUpon>NewRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NowStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NowStat.Designer.cs">
+      <DependentUpon>NowStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pictures.cs" />
+    <Compile Include="Players.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Players.Designer.cs">
+      <DependentUpon>Players.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayersUtils.cs" />
+    <Compile Include="PlayerThis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerThis.Designer.cs">
+      <DependentUpon>PlayerThis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestUtils.cs" />
+    <Compile Include="StatisticsUtils.cs" />
+    <Compile Include="Teams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teams.Designer.cs">
+      <DependentUpon>Teams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Card.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TeamsUtils.cs" />
+    <Compile Include="TeamThis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamThis.Designer.cs">
+      <DependentUpon>TeamThis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeamThis3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamThis3.Designer.cs">
+      <DependentUpon>TeamThis3.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TeamThis.resx">
+      <DependentUpon>TeamThis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamThis3.resx">
+      <DependentUpon>TeamThis3.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\Main4.png" />
+    <None Include="Resources\maiN3.png" />
+    <None Include="Resources\maiN2.png" />
+    <None Include="Resources\over.gif" />
+    <None Include="Resources\r6.gif" />
+    <None Include="Resources\source.gif" />
+    <None Include="Resources\lol.gif" />
+    <None Include="Resources\tenor.gif" />
+    <None Include="Resources\SpicyImprobableCooter-size_restricted.gif" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\DOTA_2_Logo_Emblem_481850.jpg" />
+    <None Include="Resources\1509653772_dota-2-logo-pictures-desktop-hd-wallpaper-640x480-2149492.gif" />
+    <None Include="Resources\7Tl.gif" />
+    <None Include="Resources\cyber-sport-neon %282%29.jpg" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FutureStat.resx">
+      <DependentUpon>FutureStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LastStat.resx">
+      <DependentUpon>LastStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewRequest.resx">
+      <DependentUpon>NewRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NowStat.resx">
+      <DependentUpon>NowStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Players.resx">
+      <DependentUpon>Players.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerThis.resx">
+      <DependentUpon>PlayerThis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Teams.resx">
+      <DependentUpon>Teams.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TeamsLogo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
